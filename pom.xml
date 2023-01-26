@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Licensed to the Apache Software Foundation (ASF) under one or more
+  ~ contributor license agreements.  See the NOTICE file distributed with
+  ~ this work for additional information regarding copyright ownership.
+  ~ The ASF licenses this file to You under the Apache License, Version 2.0
+  ~ (the "License"); you may not use this file except in compliance with
+  ~ the License.  You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <groupId>org.apache</groupId>
+        <artifactId>apache</artifactId>
+        <version>21</version>
+    </parent>
+	<modelVersion>4.0.0</modelVersion>
+    <groupId>org.apache.dolphinscheduler</groupId>
+    <version>2.0.5</version>
+    <artifactId>dolphinscheduler-dao</artifactId>
+    <name>${project.artifactId}</name>
+
+	<properties>
+		<maven.compiler.source>11</maven.compiler.source>
+		<maven.compiler.target>11</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <curator.version>4.3.0</curator.version>
+        <zookeeper.version>3.4.14</zookeeper.version>
+        <spring.version>5.3.12</spring.version>
+        <spring.boot.version>2.5.6</spring.boot.version>
+        <java.version>1.8</java.version>
+        <logback.version>1.2.3</logback.version>
+        <hadoop.version>2.7.3</hadoop.version>
+        <quartz.version>2.3.0</quartz.version>
+        <jackson.version>2.10.5</jackson.version>
+        <mybatis-plus.version>3.2.0</mybatis-plus.version>
+        <mybatis.spring.version>2.0.1</mybatis.spring.version>
+        <cron.utils.version>9.1.3</cron.utils.version>
+        <druid.version>1.2.4</druid.version>
+        <h2.version>1.4.200</h2.version>
+        <commons.codec.version>1.11</commons.codec.version>
+        <commons.logging.version>1.1.1</commons.logging.version>
+        <httpclient.version>4.4.1</httpclient.version>
+        <httpcore.version>4.4.1</httpcore.version>
+        <junit.version>4.12</junit.version>
+        <mysql.connector.version>8.0.16</mysql.connector.version>
+        <slf4j.api.version>1.7.5</slf4j.api.version>
+        <slf4j.log4j12.version>1.7.5</slf4j.log4j12.version>
+        <commons.collections.version>3.2.2</commons.collections.version>
+        <commons.httpclient>3.0.1</commons.httpclient>
+        <commons.beanutils.version>1.9.4</commons.beanutils.version>
+        <commons.configuration.version>1.10</commons.configuration.version>
+        <commons.lang.version>2.6</commons.lang.version>
+        <commons.email.version>1.5</commons.email.version>
+        <poi.version>4.1.2</poi.version>
+        <javax.servlet.api.version>3.1.0</javax.servlet.api.version>
+        <commons.collections4.version>4.1</commons.collections4.version>
+        <guava.version>24.1-jre</guava.version>
+        <postgresql.version>42.2.5</postgresql.version>
+        <hive.jdbc.version>2.1.0</hive.jdbc.version>
+        <commons.io.version>2.4</commons.io.version>
+        <oshi.core.version>3.9.1</oshi.core.version>
+        <clickhouse.jdbc.version>0.1.52</clickhouse.jdbc.version>
+        <mssql.jdbc.version>6.1.0.jre8</mssql.jdbc.version>
+        <presto.jdbc.version>0.238.1</presto.jdbc.version>
+        <spotbugs.version>3.1.12</spotbugs.version>
+        <checkstyle.version>3.1.2</checkstyle.version>
+        <zookeeper.version>3.4.14</zookeeper.version>
+        <curator.test>2.12.0</curator.test>
+        <frontend-maven-plugin.version>1.6</frontend-maven-plugin.version>
+        <maven-compiler-plugin.version>3.3</maven-compiler-plugin.version>
+        <maven-assembly-plugin.version>3.1.0</maven-assembly-plugin.version>
+        <maven-release-plugin.version>2.5.3</maven-release-plugin.version>
+        <maven-javadoc-plugin.version>2.10.3</maven-javadoc-plugin.version>
+        <maven-source-plugin.version>2.4</maven-source-plugin.version>
+        <maven-surefire-plugin.version>2.22.1</maven-surefire-plugin.version>
+        <maven-dependency-plugin.version>3.1.1</maven-dependency-plugin.version>
+        <rpm-maven-plugion.version>2.2.0</rpm-maven-plugion.version>
+        <jacoco.version>0.8.4</jacoco.version>
+        <jcip.version>1.0</jcip.version>
+        <maven.deploy.skip>false</maven.deploy.skip>
+        <cobertura-maven-plugin.version>2.7</cobertura-maven-plugin.version>
+        <mockito.version>2.21.0</mockito.version>
+        <powermock.version>2.0.2</powermock.version>
+        <servlet-api.version>2.5</servlet-api.version>
+        <swagger.version>1.9.3</swagger.version>
+        <springfox.version>2.9.2</springfox.version>
+        <swagger-models.version>1.5.24</swagger-models.version>
+        <guava-retry.version>2.0.0</guava-retry.version>
+        <protostuff.version>1.7.2</protostuff.version>
+        <reflections.version>0.9.12</reflections.version>
+        <byte-buddy.version>1.9.16</byte-buddy.version>
+        <java-websocket.version>1.5.1</java-websocket.version>
+        <py4j.version>0.10.9</py4j.version>
+        <auto-service.version>1.0.1</auto-service.version>
+        <jacoco.skip>true</jacoco.skip>
+        <netty.version>4.1.53.Final</netty.version>
+        <maven-jar-plugin.version>3.2.0</maven-jar-plugin.version>
+        <hibernate.validator.version>6.2.2.Final</hibernate.validator.version>
+		<dolphinscheduler-common.version>2.0.5</dolphinscheduler-common.version>
+		<zaxxer.version>3.4.5</zaxxer.version>
+		<snakeyaml.version>1.32</snakeyaml.version>
+    </properties>
+
+    <dependencies>
+        <!-- dolphinscheduler -->
+        <dependency>
+            <groupId>org.apache.dolphinscheduler</groupId>
+            <artifactId>dolphinscheduler-common</artifactId>
+			<version>${dolphinscheduler-common.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.zaxxer</groupId>
+            <artifactId>HikariCP</artifactId>
+			<version>${zaxxer.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus</artifactId>
+            <version>${mybatis-plus.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
+            <version>${mybatis-plus.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.apache.logging.log4j</groupId>
+                    <artifactId>log4j-to-slf4j</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+			<version>${postgresql.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+			<version>${mysql.connector.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+			<version>${h2.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+			<version>${logback.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-annotations</artifactId>
+			<version>${jackson.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+			<version>${jackson.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+			<version>${httpcore.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-httpclient</groupId>
+            <artifactId>commons-httpclient</artifactId>
+			<version>${commons.httpclient}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.cronutils</groupId>
+            <artifactId>cron-utils</artifactId>
+			<version>${cron.utils.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>commons-configuration</groupId>
+            <artifactId>commons-configuration</artifactId>
+			<version>${commons.configuration.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.yaml</groupId>
+            <artifactId>snakeyaml</artifactId>
+			<version>${snakeyaml.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+			<version>${spring.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+			<version>${spring.boot.version}</version>
+            <scope>test</scope>
+        </dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit.version}</version>
+		</dependency>
+
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+				<version>${maven-jar-plugin.version}</version>
+                <configuration>
+                    <excludes>
+                        <exclude>sql/</exclude>
+                        <exclude>*.yaml</exclude>
+                    </excludes>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

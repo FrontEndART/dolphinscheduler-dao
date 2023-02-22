@@ -80,7 +80,7 @@ public class Session {
     }
 
     public void setLastLoginTime(Date lastLoginTime) {
-        this.lastLoginTime = lastLoginTime;
+        this.lastLoginTime = (Date)lastLoginTime.clone();
     }
 
     @Override

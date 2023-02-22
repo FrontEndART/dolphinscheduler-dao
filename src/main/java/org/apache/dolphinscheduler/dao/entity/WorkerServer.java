@@ -101,7 +101,7 @@ public class WorkerServer {
     }
 
     public Date getLastHeartbeatTime() {
-        return lastHeartbeatTime;
+        return new Date(lastHeartbeatTime.getTime());
     }
 
     public void setLastHeartbeatTime(Date lastHeartbeatTime) {

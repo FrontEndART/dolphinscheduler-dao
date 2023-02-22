@@ -217,7 +217,7 @@ public class Schedule {
     }
 
     public void setCreateTime(Date createTime) {
-        this.createTime = createTime;
+        this.createTime = new Date(createTime.getTime());
     }
 
     public ReleaseState getReleaseState() {

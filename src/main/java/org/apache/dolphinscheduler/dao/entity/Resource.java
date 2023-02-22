@@ -105,7 +105,7 @@ public class Resource {
         this.type = type;
         this.size = size;
         this.createTime = createTime;
-        this.updateTime = updateTime;
+        this.updateTime = (Date)updateTime.clone();
     }
 
     public Resource(int id, int pid, String alias, String fullName, boolean isDirectory) {

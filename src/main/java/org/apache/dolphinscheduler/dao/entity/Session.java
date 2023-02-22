@@ -76,7 +76,7 @@ public class Session {
     }
 
     public Date getLastLoginTime() {
-        return lastLoginTime;
+        return new Date(lastLoginTime.getTime());
     }
 
     public void setLastLoginTime(Date lastLoginTime) {

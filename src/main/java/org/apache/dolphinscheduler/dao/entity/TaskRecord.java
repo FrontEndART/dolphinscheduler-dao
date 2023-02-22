@@ -153,7 +153,7 @@ public class TaskRecord {
     }
 
     public void setEndTime(Date endTime) {
-        this.endTime = endTime;
+        this.endTime = (Date)endTime.clone();
     }
 
     public String getResult() {

@@ -271,7 +271,7 @@ public class Project {
         }
 
         public Builder createTime(Date createTime) {
-            this.createTime = createTime;
+            this.createTime = new Date(createTime.getTime());
             return this;
         }
 

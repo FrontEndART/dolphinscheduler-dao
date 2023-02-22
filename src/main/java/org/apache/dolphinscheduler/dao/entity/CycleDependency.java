@@ -61,7 +61,7 @@ public class CycleDependency {
     }
 
     public Date getLastScheduleTime() {
-        return lastScheduleTime;
+        return (Date)lastScheduleTime.clone();
     }
 
     public void setLastScheduleTime(Date lastScheduleTime) {

@@ -136,7 +136,7 @@ public class Alert {
     }
 
     public Date getUpdateTime() {
-        return updateTime;
+        return new Date(updateTime.getTime());
     }
 
     public void setUpdateTime(Date updateTime) {

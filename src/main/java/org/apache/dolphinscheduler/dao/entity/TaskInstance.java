@@ -348,7 +348,7 @@ public class TaskInstance implements Serializable {
     }
 
     public Date getFirstSubmitTime() {
-        return firstSubmitTime;
+        return (Date)firstSubmitTime.clone();
     }
 
     public void setFirstSubmitTime(Date firstSubmitTime) {

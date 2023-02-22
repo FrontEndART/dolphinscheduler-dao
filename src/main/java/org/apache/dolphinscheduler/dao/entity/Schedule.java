@@ -249,7 +249,7 @@ public class Schedule {
     }
 
     public void setUpdateTime(Date updateTime) {
-        this.updateTime = updateTime;
+        this.updateTime = new Date(updateTime.getTime());
     }
 
     public int getUserId() {

@@ -140,7 +140,7 @@ public class Alert {
     }
 
     public void setUpdateTime(Date updateTime) {
-        this.updateTime = updateTime;
+        this.updateTime = new Date(updateTime.getTime());
     }
 
     public Map<String, Object> getInfo() {

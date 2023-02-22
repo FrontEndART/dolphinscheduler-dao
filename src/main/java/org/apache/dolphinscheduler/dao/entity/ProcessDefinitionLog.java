@@ -81,7 +81,7 @@ public class ProcessDefinitionLog extends ProcessDefinition {
     }
 
     public void setOperateTime(Date operateTime) {
-        this.operateTime = operateTime;
+        this.operateTime = new Date(operateTime.getTime());
     }
 
     @Override

@@ -97,7 +97,7 @@ public class ZookeeperRecord {
         this.maxLatency = maxLatency;
         this.nodeCount = nodeCount;
         this.state = state;
-        this.date = date;
+        this.date = new Date(date.getTime());
     }
 
 

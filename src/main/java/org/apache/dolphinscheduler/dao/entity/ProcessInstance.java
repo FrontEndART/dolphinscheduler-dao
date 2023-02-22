@@ -423,7 +423,7 @@ public class ProcessInstance {
     }
 
     public void setCommandStartTime(Date commandStartTime) {
-        this.commandStartTime = commandStartTime;
+        this.commandStartTime = new Date(commandStartTime.getTime());
     }
 
     public String getGlobalParams() {

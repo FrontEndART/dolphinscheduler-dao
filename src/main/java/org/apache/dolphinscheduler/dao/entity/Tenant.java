@@ -113,7 +113,7 @@ public class Tenant {
     }
 
     public void setUpdateTime(Date updateTime) {
-        this.updateTime = updateTime;
+        this.updateTime = (Date)updateTime.clone();
     }
 
     public String getQueueName() {

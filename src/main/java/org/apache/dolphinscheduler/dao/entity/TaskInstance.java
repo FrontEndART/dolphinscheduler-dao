@@ -360,7 +360,7 @@ public class TaskInstance implements Serializable {
     }
 
     public void setSubmitTime(Date submitTime) {
-        this.submitTime = submitTime;
+        this.submitTime = (Date)submitTime.clone();
     }
 
     public Date getStartTime() {

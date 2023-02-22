@@ -319,7 +319,7 @@ public class ProcessInstance {
     }
 
     public Date getEndTime() {
-        return endTime;
+        return new Date(endTime.getTime());
     }
 
     public void setEndTime(Date endTime) {

@@ -169,7 +169,7 @@ public class Schedule {
     }
 
     public void setStartTime(Date startTime) {
-        this.startTime = startTime;
+        this.startTime = new Date(startTime.getTime());
     }
 
     public Date getEndTime() {

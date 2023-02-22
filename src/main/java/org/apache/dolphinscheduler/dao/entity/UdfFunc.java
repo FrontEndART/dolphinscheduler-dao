@@ -189,7 +189,7 @@ public class UdfFunc {
 
 
     public Date getUpdateTime() {
-        return updateTime;
+        return (Date)updateTime.clone();
     }
 
     public void setUpdateTime(Date updateTime) {

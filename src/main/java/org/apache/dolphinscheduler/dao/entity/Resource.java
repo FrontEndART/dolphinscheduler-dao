@@ -127,7 +127,7 @@ public class Resource {
         this.type = type;
         this.size = size;
         this.createTime = createTime;
-        this.updateTime = updateTime;
+        this.updateTime = new Date(updateTime.getTime());
     }
 
     public int getId() {

@@ -77,7 +77,7 @@ public class ProcessDefinitionLog extends ProcessDefinition {
     }
 
     public Date getOperateTime() {
-        return operateTime;
+        return (Date)operateTime.clone();
     }
 
     public void setOperateTime(Date operateTime) {

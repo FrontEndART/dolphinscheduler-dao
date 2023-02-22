@@ -73,7 +73,7 @@ public class CycleDependency {
     }
 
     public void setExpirationTime(Date expirationTime) {
-        this.expirationTime = expirationTime;
+        this.expirationTime = (Date)expirationTime.clone();
     }
 
     public CycleEnum getCycleEnum() {

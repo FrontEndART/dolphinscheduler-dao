@@ -91,7 +91,7 @@ public class Queue {
     }
 
     public void setUpdateTime(Date updateTime) {
-        this.updateTime = updateTime;
+        this.updateTime = (Date)updateTime.clone();
     }
 
     @Override

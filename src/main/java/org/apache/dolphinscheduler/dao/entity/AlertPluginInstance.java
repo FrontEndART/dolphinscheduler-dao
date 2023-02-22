@@ -83,7 +83,7 @@ public class AlertPluginInstance {
     public AlertPluginInstance(int id, String pluginInstanceParams, String instanceName, Date updateDate) {
         this.id = id;
         this.pluginInstanceParams = pluginInstanceParams;
-        this.updateTime = updateDate;
+        this.updateTime = (Date)updateDate.clone();
         this.instanceName = instanceName;
     }
 

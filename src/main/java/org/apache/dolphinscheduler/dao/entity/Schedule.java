@@ -173,7 +173,7 @@ public class Schedule {
     }
 
     public Date getEndTime() {
-        return endTime;
+        return (Date)endTime.clone();
     }
 
     public void setEndTime(Date endTime) {

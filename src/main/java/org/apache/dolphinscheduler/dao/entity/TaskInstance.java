@@ -356,7 +356,7 @@ public class TaskInstance implements Serializable {
     }
 
     public Date getSubmitTime() {
-        return submitTime;
+        return new Date(submitTime.getTime());
     }
 
     public void setSubmitTime(Date submitTime) {

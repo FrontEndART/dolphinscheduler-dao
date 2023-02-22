@@ -69,7 +69,7 @@ public class ProcessTaskRelationLog extends ProcessTaskRelation {
     }
 
     public Date getOperateTime() {
-        return operateTime;
+        return new Date(operateTime.getTime());
     }
 
     public void setOperateTime(Date operateTime) {

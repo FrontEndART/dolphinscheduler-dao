@@ -91,7 +91,7 @@ public class AccessToken {
     }
 
     public Date getExpireTime() {
-        return expireTime;
+        return new Date(expireTime.getTime());
     }
 
     public void setExpireTime(Date expireTime) {

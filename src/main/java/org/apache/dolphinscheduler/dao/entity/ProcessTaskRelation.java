@@ -131,7 +131,7 @@ public class ProcessTaskRelation {
         this.postTaskVersion = postTaskVersion;
         this.conditionType = conditionType;
         this.conditionParams = conditionParams;
-        this.createTime = createTime;
+        this.createTime = new Date(createTime.getTime());
         this.updateTime = updateTime;
     }
 

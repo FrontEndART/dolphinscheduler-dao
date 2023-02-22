@@ -48,7 +48,7 @@ public class CycleDependency {
     public CycleDependency(int processDefineId, Date lastScheduleTime, Date expirationTime, CycleEnum cycleEnum) {
         this.processDefineId = processDefineId;
         this.lastScheduleTime = lastScheduleTime;
-        this.expirationTime = expirationTime;
+        this.expirationTime = new Date(expirationTime.getTime());
         this.cycleEnum = cycleEnum;
     }
 

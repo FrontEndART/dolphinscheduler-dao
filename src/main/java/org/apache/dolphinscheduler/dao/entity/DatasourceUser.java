@@ -96,7 +96,7 @@ public class DatasourceUser {
   }
 
   public void setCreateTime(Date createTime) {
-    this.createTime = createTime;
+    this.createTime = (Date)createTime.clone();
   }
 
   public Date getUpdateTime() {

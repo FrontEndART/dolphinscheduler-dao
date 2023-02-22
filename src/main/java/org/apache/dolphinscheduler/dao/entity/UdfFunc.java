@@ -184,7 +184,7 @@ public class UdfFunc {
     }
 
     public void setCreateTime(Date createTime) {
-        this.createTime = createTime;
+        this.createTime = (Date)createTime.clone();
     }
 
 

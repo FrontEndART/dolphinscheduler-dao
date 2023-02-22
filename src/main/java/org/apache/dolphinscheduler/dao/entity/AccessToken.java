@@ -95,7 +95,7 @@ public class AccessToken {
     }
 
     public void setExpireTime(Date expireTime) {
-        this.expireTime = expireTime;
+        this.expireTime = (Date)expireTime.clone();
     }
 
     public Date getCreateTime() {

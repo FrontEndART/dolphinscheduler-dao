@@ -258,7 +258,7 @@ public class ProcessAlertContent implements Serializable {
         }
 
         public Builder taskEndTime(Date taskEndTime) {
-            this.taskEndTime = taskEndTime;
+            this.taskEndTime = (Date)taskEndTime.clone();
             return this;
         }
 

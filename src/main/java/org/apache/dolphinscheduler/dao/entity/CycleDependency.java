@@ -61,7 +61,7 @@ public class CycleDependency {
     }
 
     public Date getLastScheduleTime() {
-        return lastScheduleTime;
+        return new Date(lastScheduleTime.getTime());
     }
 
     public void setLastScheduleTime(Date lastScheduleTime) {

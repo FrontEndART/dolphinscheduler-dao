@@ -208,7 +208,7 @@ public class ProcessAlertContent implements Serializable {
         }
 
         public Builder processEndTime(Date processEndTime) {
-            this.processEndTime = processEndTime;
+            this.processEndTime = new Date(processEndTime.getTime());
             return this;
         }
 

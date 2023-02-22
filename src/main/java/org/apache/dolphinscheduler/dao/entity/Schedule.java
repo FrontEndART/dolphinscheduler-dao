@@ -169,7 +169,7 @@ public class Schedule {
     }
 
     public void setStartTime(Date startTime) {
-        this.startTime = startTime;
+        this.startTime = (Date)startTime.clone();
     }
 
     public Date getEndTime() {

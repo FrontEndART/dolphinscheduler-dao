@@ -376,7 +376,7 @@ public class TaskInstance implements Serializable {
     }
 
     public void setEndTime(Date endTime) {
-        this.endTime = endTime;
+        this.endTime = new Date(endTime.getTime());
     }
 
     public String getHost() {

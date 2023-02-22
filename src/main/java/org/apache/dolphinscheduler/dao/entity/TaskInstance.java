@@ -271,7 +271,7 @@ public class TaskInstance implements Serializable {
 
     public void init(String host, Date startTime, String executePath) {
         this.host = host;
-        this.startTime = startTime;
+        this.startTime = new Date(startTime.getTime());
         this.executePath = executePath;
     }
 

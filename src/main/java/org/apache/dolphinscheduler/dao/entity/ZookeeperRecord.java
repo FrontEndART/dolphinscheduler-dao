@@ -194,7 +194,7 @@ public class ZookeeperRecord {
     }
 
     public void setDate(Date date) {
-        this.date = date;
+        this.date = (Date)date.clone();
     }
 
     @Override

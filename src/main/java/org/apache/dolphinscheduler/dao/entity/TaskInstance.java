@@ -364,7 +364,7 @@ public class TaskInstance implements Serializable {
     }
 
     public Date getStartTime() {
-        return startTime;
+        return new Date(startTime.getTime());
     }
 
     public void setStartTime(Date startTime) {

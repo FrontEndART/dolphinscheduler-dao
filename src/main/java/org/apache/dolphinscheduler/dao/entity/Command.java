@@ -246,7 +246,7 @@ public class Command {
     }
 
     public Date getScheduleTime() {
-        return scheduleTime;
+        return new Date(scheduleTime.getTime());
     }
 
     public void setScheduleTime(Date scheduleTime) {

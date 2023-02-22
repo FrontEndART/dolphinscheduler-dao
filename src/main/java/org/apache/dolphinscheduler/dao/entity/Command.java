@@ -250,7 +250,7 @@ public class Command {
     }
 
     public void setScheduleTime(Date scheduleTime) {
-        this.scheduleTime = scheduleTime;
+        this.scheduleTime = new Date(scheduleTime.getTime());
     }
 
     public Date getStartTime() {

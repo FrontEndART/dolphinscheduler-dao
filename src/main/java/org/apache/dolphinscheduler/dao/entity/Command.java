@@ -258,7 +258,7 @@ public class Command {
     }
 
     public void setStartTime(Date startTime) {
-        this.startTime = startTime;
+        this.startTime = (Date)startTime.clone();
     }
 
     public int getExecutorId() {

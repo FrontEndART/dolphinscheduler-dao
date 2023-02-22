@@ -95,7 +95,7 @@ public class ResourcesUser {
   }
 
   public Date getCreateTime() {
-    return createTime;
+    return new Date(createTime.getTime());
   }
 
   public void setCreateTime(Date createTime) {

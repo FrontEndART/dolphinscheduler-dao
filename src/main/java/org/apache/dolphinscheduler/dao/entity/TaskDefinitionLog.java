@@ -83,7 +83,7 @@ public class TaskDefinitionLog extends TaskDefinition {
     }
 
     public Date getOperateTime() {
-        return operateTime;
+        return (Date)operateTime.clone();
     }
 
     public void setOperateTime(Date operateTime) {

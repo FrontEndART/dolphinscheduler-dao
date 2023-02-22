@@ -168,7 +168,7 @@ public class Command {
         this.commandParam = commandParam;
         this.warningType = warningType;
         this.warningGroupId = warningGroupId;
-        this.scheduleTime = scheduleTime;
+        this.scheduleTime = new Date(scheduleTime.getTime());
         this.taskDependType = taskDependType;
         this.failureStrategy = failureStrategy;
         this.startTime = new Date();

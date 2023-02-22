@@ -253,7 +253,7 @@ public class ProcessAlertContent implements Serializable {
         }
 
         public Builder taskStartTime(Date taskStartTime) {
-            this.taskStartTime = taskStartTime;
+            this.taskStartTime = (Date)taskStartTime.clone();
             return this;
         }
 

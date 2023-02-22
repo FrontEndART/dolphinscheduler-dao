@@ -219,7 +219,7 @@ public class ErrorCommand {
     }
 
     public Date getStartTime() {
-        return startTime;
+        return new Date(startTime.getTime());
     }
 
     public void setStartTime(Date startTime) {

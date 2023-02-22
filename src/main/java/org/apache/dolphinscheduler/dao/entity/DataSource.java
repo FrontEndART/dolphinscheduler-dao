@@ -150,7 +150,7 @@ public class DataSource {
   }
 
   public void setUpdateTime(Date updateTime) {
-    this.updateTime = updateTime;
+    this.updateTime = (Date)updateTime.clone();
   }
 
 

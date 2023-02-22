@@ -57,7 +57,7 @@ public class WorkFlowLineage {
     }
 
     public void setScheduleStartTime(Date scheduleStartTime) {
-        this.scheduleStartTime = scheduleStartTime;
+        this.scheduleStartTime = (Date)scheduleStartTime.clone();
     }
 
     public Date getScheduleEndTime() {

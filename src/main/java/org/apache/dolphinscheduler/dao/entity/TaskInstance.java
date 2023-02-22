@@ -372,7 +372,7 @@ public class TaskInstance implements Serializable {
     }
 
     public Date getEndTime() {
-        return endTime;
+        return (Date)endTime.clone();
     }
 
     public void setEndTime(Date endTime) {

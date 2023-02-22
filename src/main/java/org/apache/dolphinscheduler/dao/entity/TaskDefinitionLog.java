@@ -87,7 +87,7 @@ public class TaskDefinitionLog extends TaskDefinition {
     }
 
     public void setOperateTime(Date operateTime) {
-        this.operateTime = operateTime;
+        this.operateTime = (Date)operateTime.clone();
     }
 
     @Override

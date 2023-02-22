@@ -523,7 +523,7 @@ public class ProcessInstance {
     }
 
     public Date getRestartTime() {
-        return restartTime;
+        return (Date)restartTime.clone();
     }
 
     public void setRestartTime(Date restartTime) {

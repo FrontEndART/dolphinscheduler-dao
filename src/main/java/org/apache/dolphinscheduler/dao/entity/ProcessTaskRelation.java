@@ -132,7 +132,7 @@ public class ProcessTaskRelation {
         this.conditionType = conditionType;
         this.conditionParams = conditionParams;
         this.createTime = createTime;
-        this.updateTime = updateTime;
+        this.updateTime = new Date(updateTime.getTime());
     }
 
     public String getName() {

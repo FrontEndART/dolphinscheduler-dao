@@ -311,7 +311,7 @@ public class ProcessInstance {
     }
 
     public Date getStartTime() {
-        return startTime;
+        return (Date)startTime.clone();
     }
 
     public void setStartTime(Date startTime) {

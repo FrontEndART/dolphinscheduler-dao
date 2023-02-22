@@ -177,7 +177,7 @@ public class Schedule {
     }
 
     public void setEndTime(Date endTime) {
-        this.endTime = endTime;
+        this.endTime = (Date)endTime.clone();
     }
 
     public String getTimezoneId() {

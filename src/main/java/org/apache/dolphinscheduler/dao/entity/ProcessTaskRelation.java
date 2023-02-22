@@ -164,7 +164,7 @@ public class ProcessTaskRelation {
     }
 
     public void setUpdateTime(Date updateTime) {
-        this.updateTime = updateTime;
+        this.updateTime = new Date(updateTime.getTime());
     }
 
     public String getConditionParams() {

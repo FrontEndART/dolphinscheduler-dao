@@ -527,7 +527,7 @@ public class ProcessInstance {
     }
 
     public void setRestartTime(Date restartTime) {
-        this.restartTime = restartTime;
+        this.restartTime = (Date)restartTime.clone();
     }
 
     /**

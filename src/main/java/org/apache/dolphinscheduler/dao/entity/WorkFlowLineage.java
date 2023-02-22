@@ -65,7 +65,7 @@ public class WorkFlowLineage {
     }
 
     public void setScheduleEndTime(Date scheduleEndTime) {
-        this.scheduleEndTime = scheduleEndTime;
+        this.scheduleEndTime = (Date)scheduleEndTime.clone();
     }
 
     public String getCrontab() {

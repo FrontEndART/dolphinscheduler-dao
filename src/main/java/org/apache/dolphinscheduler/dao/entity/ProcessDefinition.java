@@ -250,7 +250,7 @@ public class ProcessDefinition {
     }
 
     public void setUpdateTime(Date updateTime) {
-        this.updateTime = updateTime;
+        this.updateTime = new Date(updateTime.getTime());
     }
 
     public Flag getFlag() {

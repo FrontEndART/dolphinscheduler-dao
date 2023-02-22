@@ -203,7 +203,7 @@ public class ProcessAlertContent implements Serializable {
         }
 
         public Builder processStartTime(Date processStartTime) {
-            this.processStartTime = processStartTime;
+            this.processStartTime = (Date)processStartTime.clone();
             return this;
         }
 

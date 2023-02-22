@@ -99,7 +99,7 @@ public class EnvironmentWorkerGroupRelation {
     }
 
     public void setUpdateTime(Date updateTime) {
-        this.updateTime = updateTime;
+        this.updateTime = new Date(updateTime.getTime());
     }
 
     @Override

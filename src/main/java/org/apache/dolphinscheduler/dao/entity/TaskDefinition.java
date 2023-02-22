@@ -223,7 +223,7 @@ public class TaskDefinition {
     }
 
     public void setCreateTime(Date createTime) {
-        this.createTime = createTime;
+        this.createTime = new Date(createTime.getTime());
     }
 
     public Date getUpdateTime() {

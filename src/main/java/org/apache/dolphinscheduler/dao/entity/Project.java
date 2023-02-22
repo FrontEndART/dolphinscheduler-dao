@@ -276,7 +276,7 @@ public class Project {
         }
 
         public Builder updateTime(Date updateTime) {
-            this.updateTime = updateTime;
+            this.updateTime = (Date)updateTime.clone();
             return this;
         }
 

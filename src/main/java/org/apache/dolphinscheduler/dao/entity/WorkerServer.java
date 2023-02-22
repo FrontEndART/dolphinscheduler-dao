@@ -105,7 +105,7 @@ public class WorkerServer {
     }
 
     public void setLastHeartbeatTime(Date lastHeartbeatTime) {
-        this.lastHeartbeatTime = lastHeartbeatTime;
+        this.lastHeartbeatTime = (Date)lastHeartbeatTime.clone();
     }
 
     public String getResInfo() {

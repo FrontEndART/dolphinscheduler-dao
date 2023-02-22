@@ -104,7 +104,7 @@ public class DatasourceUser {
   }
 
   public void setUpdateTime(Date updateTime) {
-    this.updateTime = updateTime;
+    this.updateTime = (Date)updateTime.clone();
   }
 
   @Override

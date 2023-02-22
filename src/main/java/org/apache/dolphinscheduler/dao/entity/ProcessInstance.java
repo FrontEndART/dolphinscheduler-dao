@@ -323,7 +323,7 @@ public class ProcessInstance {
     }
 
     public void setEndTime(Date endTime) {
-        this.endTime = endTime;
+        this.endTime = (Date)endTime.clone();
     }
 
     public int getRunTimes() {

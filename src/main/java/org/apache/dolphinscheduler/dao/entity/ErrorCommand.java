@@ -211,7 +211,7 @@ public class ErrorCommand {
     }
 
     public Date getScheduleTime() {
-        return scheduleTime;
+        return (Date)scheduleTime.clone();
     }
 
     public void setScheduleTime(Date scheduleTime) {

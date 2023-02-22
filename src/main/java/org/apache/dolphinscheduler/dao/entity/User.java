@@ -169,7 +169,7 @@ public class  User {
     }
 
     public void setUpdateTime(Date updateTime) {
-        this.updateTime = updateTime;
+        this.updateTime = new Date(updateTime.getTime());
     }
 
 

@@ -219,7 +219,7 @@ public class TaskDefinition {
     }
 
     public Date getCreateTime() {
-        return createTime;
+        return (Date)createTime.clone();
     }
 
     public void setCreateTime(Date createTime) {

@@ -53,7 +53,7 @@ public class WorkFlowLineage {
     }
 
     public Date getScheduleStartTime() {
-        return scheduleStartTime;
+        return (Date)scheduleStartTime.clone();
     }
 
     public void setScheduleStartTime(Date scheduleStartTime) {

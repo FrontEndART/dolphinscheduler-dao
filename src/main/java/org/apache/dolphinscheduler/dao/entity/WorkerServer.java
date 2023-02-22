@@ -89,7 +89,7 @@ public class WorkerServer {
     }
 
     public void setCreateTime(Date createTime) {
-        this.createTime = createTime;
+        this.createTime = (Date)createTime.clone();
     }
 
     public String getZkDirectory() {

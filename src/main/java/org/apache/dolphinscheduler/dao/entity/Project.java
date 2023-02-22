@@ -143,7 +143,7 @@ public class Project {
     }
 
     public void setUpdateTime(Date updateTime) {
-        this.updateTime = updateTime;
+        this.updateTime = new Date(updateTime.getTime());
     }
 
     public void setDescription(String description) {

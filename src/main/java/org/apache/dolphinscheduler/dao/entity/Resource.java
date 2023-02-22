@@ -126,7 +126,7 @@ public class Resource {
         this.userId = userId;
         this.type = type;
         this.size = size;
-        this.createTime = createTime;
+        this.createTime = (Date)createTime.clone();
         this.updateTime = updateTime;
     }
 

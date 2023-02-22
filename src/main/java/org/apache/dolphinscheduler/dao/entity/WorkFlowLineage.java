@@ -61,7 +61,7 @@ public class WorkFlowLineage {
     }
 
     public Date getScheduleEndTime() {
-        return scheduleEndTime;
+        return (Date)scheduleEndTime.clone();
     }
 
     public void setScheduleEndTime(Date scheduleEndTime) {
